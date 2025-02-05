@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebAPI.Models.Post>
+
+@{
+    ViewBag.Title = "Post Data";
+}
+
+<h2>Posts</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>UserId</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Id</td>
+                <td>@post.UserId</td>
+                <td>@post.Title</td>
+                <td>@post.Body</td>
+            </tr>
+        }
+    </tbody>
+</table>
